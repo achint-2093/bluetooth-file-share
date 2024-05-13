@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.techuntried.bluetoothshare.ui.home.FragmentHome"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentConnection"
+            app:destination="@id/fragmentConnection" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentConnection"
+        android:name="com.techuntried.bluetoothshare.ui.connection.FragmentConnection"
+        android:label="FragmentConnection"
+        tools:layout="@layout/fragment_connection">
+        <action
+            android:id="@+id/action_fragmentConnection_to_fragmentDataPicker"
+            app:destination="@id/fragmentDataPicker" />
+        <argument
+            android:name="connection_type"
+            app:argType="com.techuntried.bluetoothshare.util.ConnectionType" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDataPicker"
+        android:name="com.techuntried.bluetoothshare.ui.dataPick.FragmentDataPicker"
+        android:label="FragmentDataPicker"
+        tools:layout="@layout/fragment_data_picker">
+        <action
+            android:id="@+id/action_fragmentDataPicker_to_fragmentSharing"
+            app:destination="@id/fragmentSharing" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSharing"
+        android:name="com.techuntried.bluetoothshare.ui.share.FragmentSharing"
+        android:label="FragmentSharing"
+        tools:layout="@layout/fragment_sharing"/>
+</navigation>

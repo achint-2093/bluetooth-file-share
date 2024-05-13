@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#ffffff</color>
+    <color name="selected_background">#d0d0d0</color>
+    <color name="dialog_background">#ffffff</color>
+    <color name="status_bar_color">#ffffff</color>
+    <color name="text_color">#000000</color>
+    <color name="icon_color">#000000</color>
+    <color name="text_color_light">#B0B0B0</color>
+    <color name="toolbar_title_color">#000000</color>
+    <color name="box_background">#f3f4f8</color>
+    <color name="mode_background">#f3f4f8</color>
+    <color name="button_color">#E53935</color>
+    <color name="favourite_color">#F44336</color>
+    <color name="cancelButton_color">#e9eaec</color>
+    <color name="button_text">#ffffff</color>
+    <color name="cancel_text">#000000</color>
+    <color name="storagePathColor">#3498db</color>
+    <color name="bottom_nav_bg">#ffffff</color>
+    <color name="shimmer_color">#636868</color>
+</resources>
