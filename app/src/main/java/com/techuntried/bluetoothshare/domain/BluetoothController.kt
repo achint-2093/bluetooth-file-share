@@ -2,7 +2,6 @@ package com.techuntried.bluetoothshare.domain
 
 
 import com.techuntried.bluetoothshare.domain.model.BluetoothDeviceItem
-import com.techuntried.bluetoothshare.domain.model.BluetoothMessage
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -19,7 +18,6 @@ interface BluetoothController {
     fun startBluetoothServer(): Flow<ConnectionResult>
     fun connectToDevice(device: BluetoothDeviceItem): Flow<ConnectionResult>
 
-    suspend fun trySendMessage(message: String): BluetoothMessage?
 
     fun closeConnection()
     fun release()

@@ -3,21 +3,20 @@ package com.techuntried.bluetoothshare.domain
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
 import com.techuntried.bluetoothshare.domain.model.BluetoothDeviceItem
-import com.techuntried.bluetoothshare.domain.model.BluetoothMessage
 
-fun String.toBluetoothMessage(isFromLocalUser: Boolean): BluetoothMessage {
-    val name = substringBeforeLast("#")
-    val message = substringAfter("#")
-    return BluetoothMessage(
-        message = message,
-        senderName = name,
-        isFromLocalUser = isFromLocalUser
-    )
-}
-
-fun BluetoothMessage.toByteArray(): ByteArray {
-    return "$senderName#$message".encodeToByteArray()
-}
+//fun String.toBluetoothMessage(isFromLocalUser: Boolean): BluetoothMessage {
+//    val name = substringBeforeLast("#")
+//    val message = substringAfter("#")
+//    return BluetoothMessage(
+//        message = message,
+//        senderName = name,
+//        isFromLocalUser = isFromLocalUser
+//    )
+//}
+//
+//fun BluetoothMessage.toByteArray(): ByteArray {
+//    return "$senderName#$message".encodeToByteArray()
+//}
 
 
 

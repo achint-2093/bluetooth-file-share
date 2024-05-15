@@ -1,7 +1,6 @@
-package com.techuntried.bluetooth.ui
+package com.techuntried.bluetoothshare.ui
 
 import com.techuntried.bluetoothshare.domain.model.BluetoothDeviceItem
-import com.techuntried.bluetoothshare.domain.model.BluetoothMessage
 
 data class BluetoothUiState(
     val scannedDevices: List<BluetoothDeviceItem> = emptyList(),
@@ -9,5 +8,19 @@ data class BluetoothUiState(
     val isConnected: Boolean = false,
     val isConnecting: Boolean = false,
     val errorMessage: String? = null,
-    val messages: List<BluetoothMessage> = emptyList()
 )
+
+data class ConnectionUiState(
+    val errorMessage: String? = null,
+    val scannedDevices: List<BluetoothDeviceItem> = emptyList(),
+    val connectionState: ConnectionState?=null
+)
+
+enum class ConnectionState {
+    Connecting,
+    Waiting,
+    Connected,
+    Failed,
+    Scanning
+}
+

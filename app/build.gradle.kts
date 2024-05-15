@@ -60,6 +60,8 @@ dependencies {
     //navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+    //near by devices
+    implementation("com.google.android.gms:play-services-nearby:19.2.0")
 }
 kapt {
     correctErrorTypes = true
